@@ -14,17 +14,16 @@ class UpdateMaterialAlert extends StatelessWidget {
   final String ignoreButtonLabel;
   final String newVersionLabel;
 
-  UpdateMaterialAlert({
-    required this.forceUpdate,
-    required this.appName,
-    required this.playStoreUrl,
-    required this.titlePrefix,
-    required this.description,
-    required this.updateButtonLabel,
-    required this.closeButtonLabel,
-    required this.ignoreButtonLabel,
-    this.newVersionLabel = 'New version available'
-  });
+  UpdateMaterialAlert(
+      {required this.forceUpdate,
+      required this.appName,
+      required this.playStoreUrl,
+      required this.titlePrefix,
+      required this.description,
+      required this.updateButtonLabel,
+      required this.closeButtonLabel,
+      required this.ignoreButtonLabel,
+      this.newVersionLabel = 'New version available'});
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +38,8 @@ class UpdateMaterialAlert extends StatelessWidget {
       onPressed: () => Navigator.pop(context),
     );
 
-    final ButtonStyle flatButtonStyle = TextButton.styleFrom(
-      backgroundColor: Colors.blue,
-    );
+    final ButtonStyle flatButtonStyle =
+        TextButton.styleFrom(backgroundColor: Color.fromARGB(255, 75, 28, 155));
 
     Widget updateButton = TextButton(
       child: Text(updateButtonLabel.toUpperCase(),
@@ -59,7 +57,7 @@ class UpdateMaterialAlert extends StatelessWidget {
         children: <Widget>[
           Text(
             newVersionLabel,
-            style: TextStyle(color: Colors.grey),
+            style: TextStyle(color: Color.fromARGB(255, 203, 189, 226)),
           ),
           SizedBox(height: 24.0),
           Text(description),

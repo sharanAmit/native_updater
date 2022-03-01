@@ -20,7 +20,8 @@ class ErrorMaterialAlert extends StatelessWidget {
     );
 
     Widget closeButton = TextButton(
-      child: Text(errorCloseButtonLabel ?? 'CLOSE', style: TextStyle(color: Colors.white)),
+      child: Text(errorCloseButtonLabel ?? 'CLOSE',
+          style: TextStyle(color: Colors.white)),
       onPressed: () => Navigator.pop(context),
       style: flatButtonStyle,
     );
@@ -33,7 +34,7 @@ class ErrorMaterialAlert extends StatelessWidget {
         children: <Widget>[
           Text(
             errorSubtitle ?? 'Can\'t perform update.',
-            style: TextStyle(color: Colors.grey),
+            style: TextStyle(color: Color.fromARGB(255, 193, 181, 214)),
           ),
           SizedBox(height: 24.0),
           Text(description),
